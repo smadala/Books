@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+<h3>{{=message}}</h3>
+
+{{for row in published:}}
+	<div style="float: left;margin-bottom: 1em;overflow: auto;">
+		<div class="bimage">
+			<img  width="140" height="140" border="0" alt="Image Baby" {{if(row.image):}} src="{{=URL('download',args=row.image)}}" {{else:}} src="{{=URL('static','images/NoImage.jpeg')}}"/>
+		</div>
+		<div style="padding-top: 5px;padding-bottom: 2px;">
+			<ul>
+				<li>Name:{{=row.name}}</li>
+				<li>Description:{{=row.description}}</li>
+				<li>Author:{{=row.author}}</li>
+				<li>Department:{{=row.department}}</li>
+			</ul>
+		</div>
+	</div>
+{{pass}}
+

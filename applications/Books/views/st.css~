@@ -1,0 +1,6 @@
+div.blockit {
+    float: left;
+    margin-bottom: 1em;
+    width: 32%;
+    overflow: auto;
+}
