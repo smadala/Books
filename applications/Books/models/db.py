@@ -77,6 +77,11 @@ db.define_table('publish_book',
                 Field('price','double'),
                 Field('image','upload'),
                 Field('auth_user','reference auth_user', writable=False, readable=False ))
+db.define_table('request_book',
+		Field('name','string'),
+		Field('author','string'),
+		Field('auth_user','reference auth_user', writable=False, readable = False))
+
 ##
 ## Fields can be 'string','text','password','integer','double','boolean'
 ##       'date','time','datetime','blob','upload', 'reference TABLENAME'

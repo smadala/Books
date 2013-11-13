@@ -1,7 +1,11 @@
 {{extend 'layout.html'}}
 <h3>{{=message}}</h3>
+ <h1 class ="style1">
+        Style
+</h1>
 
 {{for row in published:}}
+
 	<div style="float: left;margin-bottom: 1em;overflow: auto;">
 		<div class="bimage">
 			<img  width="140" height="140" border="0" alt="Image Baby" {{if(row.image):}} src="{{=URL('download',args=row.image)}}" {{else:}} src="{{=URL('static','images/NoImage.jpeg')}}" {{pass}}/>
@@ -16,4 +20,3 @@
 		</div>
 	</div>
 {{pass}}
-

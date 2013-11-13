@@ -4,6 +4,7 @@
 def publish():
     form=SQLFORM(db.publish_book)
     if form.process(dbio=False).accepted:
+           #check in request book send mail
            db.publish_book.insert(auth_user=auth.user.id , **dict(form.vars))#insert all the properties
            response.flash="form accepted"
     else:
